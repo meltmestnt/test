@@ -112,7 +112,7 @@ function watchAll() {
 // custom scripts
 
 const build = gulp.series(clean, gulp.parallel(fonts, css, images, html));
-const watch = gulp.parallel(watchAll, browserSync);
+const watch = gulp.series(cssDev, gulp.parallel(watchAll, browserSync));
 
 // export tasks to use from cmd
 
