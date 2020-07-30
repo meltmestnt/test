@@ -94,6 +94,20 @@ function html() {
         
 }
 
+// export fonts
+
+function fonts() {
+    return gulp
+        .src("./src/assets/fonts/*")
+        .pipe(gulp.dest("./dist/assets/fonts/"))
+}
+
+function icons() {
+    return gulp
+        .src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
+        .pipe(gulp.dest("./dist/assets/webfonts/"));
+}
+
 // watch files
 
 function watchAll() {
@@ -104,7 +118,7 @@ function watchAll() {
 
 // custom scripts
 
-const build = gulp.series(clean, gulp.parallel(css, images, html));
+const build = gulp.series(clean, gulp.parallel(fonts, icons, css, images, html));
 const watch = gulp.parallel(watchAll, browserSync);
 
 // export tasks to use from cmd
