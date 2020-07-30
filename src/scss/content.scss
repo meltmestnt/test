@@ -89,13 +89,18 @@
             padding-left: 15px;
             &-list {
                 display: flex;
-                img {
-                    width: 33px;
-                    height: 33px;
-                    object-fit: cover;
+                li {
+                    list-style: none;
                     margin-right: 21px;
-                    &.invert {
-                        filter: invert(100%);
+                    cursor: pointer;
+                    img {
+                        width: 33px;
+                        height: 33px;
+                        object-fit: cover;
+                        
+                        &.invert {
+                            filter: invert(100%);
+                        }
                     }
                     &:first-child {
                         margin-left: 0;
