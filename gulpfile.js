@@ -46,7 +46,7 @@ function browserSyncReload(done) {
 // clean assets
 
 function clean() {
-    return del(["./src/assets"])
+    return del(["./src/css", "./src/assets/img"])
 }
 
 // optimize images

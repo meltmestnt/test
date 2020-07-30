@@ -1,0 +1,79 @@
+.header {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+    }
+    .header-logo {
+        display: flex;
+        font-family: 'Heebo', sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        .vertical-list {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: flex-start;
+            padding-left: 18px;
+            padding-top: 2px;
+            &-item {
+                list-style: none;
+                color: #808080;
+                font-size: 14px;
+                line-height: 15px;
+            }
+        }
+        .divider {
+            height: 100%;
+            padding-right: 15px;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid #ccc;
+        }
+        .header-title {
+            color: #fff;
+            font-size: 40px;
+            line-height: 30px;
+            font-weight: 300;
+        }
+        .header-subtitle {
+            line-height: 12px;
+            text-align: end;
+            color: #ff1d25;
+            font-weight: 700;
+            margin-left: 7px;
+        }
+        &.english {
+            font-family: 'Anisette', sans-serif;
+        }
+        &.inversed {
+            .vertical-list {
+                padding-left: 0px;
+                padding-right: 18px;
+                direction: rtl;
+                &-item {
+                    font-weight: 500;
+                    font-size: 18px;
+                }
+            }
+            .divider {
+                border-right: none;
+                border-left: 1px solid #ccc;
+                padding-right: 0px;
+                padding-left: 15px;
+                .header-title {
+                    color: #fff;
+                }
+                .header-subtitle {
+                    text-align: start;
+                }
+            }
+        }
+    }
+}

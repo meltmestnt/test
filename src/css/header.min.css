@@ -1,38 +1,3 @@
-@font-face {
-  font-family: "Heebo";
-  src: url("../assets/fonts/Heebo-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-}
-
-@font-face {
-  font-family: "Anisette";
-  src: url("../assets/fonts/Anisette-Light.otf") format("opentype");
-  font-weight: 300;
-  font-style: normal;
-  font-stretch: normal;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.container-full {
-  width: 100%;
-  height: 100%;
-}
-
-.container {
-  max-width: 1200px;
-  min-width: 768px;
-  width: 100%;
-  padding: 0px 49px;
-  padding-left: 45px;
-}
-
 .header {
   background-color: #000;
   display: flex;
@@ -122,13 +87,4 @@
 
 .header .header-logo.inversed .divider .header-subtitle {
   text-align: start;
-}
-
-.content {
-  background-color: #cccccc;
-}
-
-.content .container {
-  display: flex;
-  flex-direction: column;
 }

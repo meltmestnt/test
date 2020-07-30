@@ -1,3 +1,17 @@
-body {
-    background: white;
+@font-face {
+    font-family: "Heebo";
+    src: url("../assets/fonts/Heebo-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
 }
+@font-face {
+    font-family: "Anisette";
+    src: url("../assets/fonts/Anisette-Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+}
+@import './base.scss';
+@import './header.scss';
+@import './content.scss';

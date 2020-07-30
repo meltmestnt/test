@@ -1,0 +1,8 @@
+.content {
+  background-color: #cccccc;
+}
+
+.content .container {
+  display: flex;
+  flex-direction: column;
+}
