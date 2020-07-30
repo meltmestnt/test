@@ -1,9 +1,15 @@
 .content {
     background-color: #cccccc;
     padding: 48px 0px;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    flex: 1;
     .container {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        min-height: 100%;
         .content-title {
             width: 100%;
             display: flex;
@@ -74,6 +80,35 @@
                     color: #fff;
                 }
             }
+        }
+        .content-links {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            padding-top: 20px;
+            padding-left: 15px;
+            &-list {
+                display: flex;
+                img {
+                    width: 33px;
+                    height: 33px;
+                    object-fit: cover;
+                    margin-right: 21px;
+                    &.invert {
+                        filter: invert(100%);
+                    }
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    &:last-child {
+                        margin-right: 0px;
+                    }
+                }
+                &.negative {
+                    margin-top: -5px;
+                }
+            }
+            
         }
     }
 }

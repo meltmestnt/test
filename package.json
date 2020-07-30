@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/meltmestnt/test#readme",
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.14.0",
     "browser-sync": "^2.26.12",
     "gulp": "^4.0.2",
     "gulp-imagemin": "^7.1.0",

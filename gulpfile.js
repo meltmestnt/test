@@ -46,7 +46,7 @@ function browserSyncReload(done) {
 // clean assets
 
 function clean() {
-    return del(["./src/css", "./src/assets/img"])
+    return del(["./src/css"])
 }
 
 // optimize images
@@ -54,7 +54,6 @@ function clean() {
 function images() {
     return gulp
         .src("./src/assets/img/**/*")
-        .pipe(newer("./src/assets/img"))
         .pipe(
             imagemin()
         )
@@ -102,12 +101,6 @@ function fonts() {
         .pipe(gulp.dest("./dist/assets/fonts/"))
 }
 
-function icons() {
-    return gulp
-        .src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
-        .pipe(gulp.dest("./dist/assets/webfonts/"));
-}
-
 // watch files
 
 function watchAll() {
@@ -118,7 +111,7 @@ function watchAll() {
 
 // custom scripts
 
-const build = gulp.series(clean, gulp.parallel(fonts, icons, css, images, html));
+const build = gulp.series(clean, gulp.parallel(fonts, css, images, html));
 const watch = gulp.parallel(watchAll, browserSync);
 
 // export tasks to use from cmd
